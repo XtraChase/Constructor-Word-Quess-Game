@@ -1,30 +1,23 @@
-let char = "";
-var quessed;
-
 //constructor letter
-var Letter = function(char, underscore) {
-  this.char = char;
-  this.underscore = underscore;
-};
+class Letter {
+  constructor(char) {
+    this.char = char;
+    this.underscore = "_";
+    this.guessed = false;
+  }
 
-// A function that returns the underlying character if the letter has been guessed,
-// or an underscore if the letter has not been guessed
-// function returnedGuess() {
-//   if (quess ===  {
-//     char = quess;
-//   } else {
-//     char = "_";
-//   }
-// }
+  getChar() {
+    if (this.guessed) return this.char;
+    else return "_";
+  }
 
-//A function that takes a character as an argument and checks it against the underlying character,
-//updating the stored boolean value to true if it was guessed correctly
-// function charArgument(var1) {
-//   if (var1 === char) {
-//     guessed = true;
-//   } else {
-//     guessed = false;
-//   }
-// }
+  guessChar(var1) {
+    if (var1 === this.char) {
+      this.guessed = true;
+      return true;
+    }
+    return false;
+  }
+}
 
 module.exports = Letter;
