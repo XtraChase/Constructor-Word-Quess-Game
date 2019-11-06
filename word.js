@@ -10,6 +10,7 @@ class Word {
     for (var i = 0; i < this.word.length; i++) {
       var letter = new Letter(this.word[i]);
       this.letterArray.push(letter);
+      // console.log("Print" + this.letterArray);
     }
   }
 
@@ -21,7 +22,6 @@ class Word {
   }
 
   guess(letter) {
-    var letterGuessed = false;
     for (var i = 0; i < this.letterArray.length; i++)
       this.letterArray[i].guessChar(letter);
   }
