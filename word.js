@@ -22,8 +22,17 @@ class Word {
   }
 
   guess(letter) {
+    var guessed = false;
     for (var i = 0; i < this.letterArray.length; i++)
-      this.letterArray[i].guessChar(letter);
+      guessed |= this.letterArray[i].guessChar(letter);
+    return guessed;
+  }
+
+  wordGuessed() {
+    var guessed = true;
+    for (var i = 0; i < this.letterArray.length; i++)
+      guessed &= this.letterArray[i].guessed;
+    return guessed;
   }
 }
 
