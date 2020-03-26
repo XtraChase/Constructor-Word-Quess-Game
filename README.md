@@ -1,5 +1,6 @@
 # Constructor-Word-Quess-Game
 
+## Description
 A node word guess command-line game using constructor functions.
 
 ## What I learned
